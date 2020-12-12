@@ -9,7 +9,7 @@ class Student(models.Model):
 
     name = models.CharField(max_length=50)
     status = models.CharField(max_length=1, choices=STATUS_TYPES, default=ACTIVE)
-    email = models.CharField(max_length=50, default=None)
+    email = models.CharField(max_length=50, blank=True, default=None)
     gender = models.CharField(max_length=1, default='M')      # M, F, O
     branch = models.ForeignKey('Branch', on_delete=models.CASCADE)
 
