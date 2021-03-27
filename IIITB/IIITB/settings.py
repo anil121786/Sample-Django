@@ -80,8 +80,8 @@ DATABASES = {
     'default': {
         'NAME': 'IIITB',
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'localhost',
-        'PORT': '',
+        'HOST': 'db',
+        'PORT': '3306',
         'USER': 'root',
         'PASSWORD': 'Logan121786'
     }

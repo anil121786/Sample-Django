@@ -11,7 +11,7 @@ def hello(request):
 class BranchSerializer(serializers.ModelSerializer):
     class Meta:
         model = Branch
-        fields = ('name',)
+        fields = ('id', 'name',)
 
 
 class BranchViewSet(viewsets.ModelViewSet):
@@ -23,7 +23,7 @@ class StudentSerializer(serializers.ModelSerializer):
     branch_name = serializers.CharField(source='branch.name')
     class Meta:
         model = Student
-        fields = ('name', 'status', 'email', 'gender', 'branch_id', 'branch_name', 'upd_on', 'upd_by')
+        fields = ('id', 'name', 'status', 'email', 'gender', 'branch_id', 'branch_name', 'upd_on', 'upd_by')
 
 
 class StudentViewSet(viewsets.ModelViewSet):
